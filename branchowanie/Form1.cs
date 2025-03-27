@@ -96,7 +96,12 @@ namespace branchowanie
 
         private void bUpDo_Click(object sender, EventArgs e)
         {
-
+            if (pictureBox1.Image != null)
+            {
+                Bitmap flippedImage = new Bitmap(pictureBox1.Image);
+                flippedImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
+                pictureBox1.Image = flippedImage;
+            }
         }
     }
 }
