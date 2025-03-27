@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "branchowanie", "branchowanie\branchowanie.csproj", "{27721E30-3072-4772-A826-8A2DCCA1C0E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27721E30-3072-4772-A826-8A2DCCA1C0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27721E30-3072-4772-A826-8A2DCCA1C0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27721E30-3072-4772-A826-8A2DCCA1C0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27721E30-3072-4772-A826-8A2DCCA1C0E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41EB9A15-5C01-47D0-89B3-3BA42BD6E42E}
+	EndGlobalSection
+EndGlobal
