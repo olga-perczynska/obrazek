@@ -31,6 +31,9 @@
             button1 = new Button();
             pictureBox1 = new PictureBox();
             bRotate = new Button();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
+            radioButton3 = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -60,12 +63,50 @@
             bRotate.TabIndex = 2;
             bRotate.Text = "Rotate";
             bRotate.UseVisualStyleBackColor = true;
+            bRotate.Click += bRotate_Click;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(102, 176);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(87, 45);
+            radioButton1.TabIndex = 3;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "90";
+            radioButton1.UseVisualStyleBackColor = true;
+            radioButton1.CheckedChanged += radioButton1_CheckedChanged;
+            // 
+            // radioButton2
+            // 
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(102, 227);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(103, 45);
+            radioButton2.TabIndex = 4;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "180";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            radioButton3.AutoSize = true;
+            radioButton3.Location = new Point(102, 278);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(103, 45);
+            radioButton3.TabIndex = 5;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "270";
+            radioButton3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1089, 820);
+            Controls.Add(radioButton3);
+            Controls.Add(radioButton2);
+            Controls.Add(radioButton1);
             Controls.Add(bRotate);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
@@ -73,6 +114,7 @@
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -80,5 +122,8 @@
         private Button button1;
         private PictureBox pictureBox1;
         private Button bRotate;
+        private RadioButton radioButton1;
+        private RadioButton radioButton2;
+        private RadioButton radioButton3;
     }
 }
