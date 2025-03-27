@@ -34,6 +34,8 @@
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
             radioButton3 = new RadioButton();
+            bInvert = new Button();
+            bUpDo = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -99,11 +101,33 @@
             radioButton3.Text = "270";
             radioButton3.UseVisualStyleBackColor = true;
             // 
+            // bInvert
+            // 
+            bInvert.Location = new Point(102, 375);
+            bInvert.Name = "bInvert";
+            bInvert.Size = new Size(236, 58);
+            bInvert.TabIndex = 6;
+            bInvert.Text = "Invert colors";
+            bInvert.UseVisualStyleBackColor = true;
+            bInvert.Click += bInvert_Click;
+            // 
+            // bUpDo
+            // 
+            bUpDo.Location = new Point(102, 471);
+            bUpDo.Name = "bUpDo";
+            bUpDo.Size = new Size(236, 58);
+            bUpDo.TabIndex = 7;
+            bUpDo.Text = "Upside down";
+            bUpDo.UseVisualStyleBackColor = true;
+            bUpDo.Click += bUpDo_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1089, 820);
+            Controls.Add(bUpDo);
+            Controls.Add(bInvert);
             Controls.Add(radioButton3);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
@@ -125,5 +149,7 @@
         private RadioButton radioButton1;
         private RadioButton radioButton2;
         private RadioButton radioButton3;
+        private Button bInvert;
+        private Button bUpDo;
     }
 }

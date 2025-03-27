@@ -22,7 +22,8 @@ namespace branchowanie
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     originalImage = Image.FromFile(openFileDialog.FileName);
-                    pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+                    //pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+                    pictureBox1.Image = new Bitmap(originalImage);
                     pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
             }
@@ -38,7 +39,7 @@ namespace branchowanie
             if (radioButton3.Checked)
                 return 270;
 
-            return 0; 
+            return 0;
         }
         private void bRotate_Click(object sender, EventArgs e)
         {
@@ -66,6 +67,34 @@ namespace branchowanie
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bInvert_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                Bitmap invertedImage = InvertColors(new Bitmap(pictureBox1.Image));
+                pictureBox1.Image = invertedImage;
+            }
+        }
+
+        private Bitmap InvertColors(Bitmap bmp)
+        {
+            for (int y = 0; y < bmp.Height; y++)
+            {
+                for (int x = 0; x < bmp.Width; x++)
+                {
+                    Color pixelColor = bmp.GetPixel(x, y);
+                    Color invertedColor = Color.FromArgb(255 - pixelColor.R, 255 - pixelColor.G, 255 - pixelColor.B);
+                    bmp.SetPixel(x, y, invertedColor);
+                }
+            }
+            return bmp;
+        }
+
+        private void bUpDo_Click(object sender, EventArgs e)
         {
 
         }
