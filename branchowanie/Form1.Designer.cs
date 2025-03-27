@@ -30,12 +30,13 @@
         {
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            bRotate = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(102, 557);
+            button1.Location = new Point(102, 702);
             button1.Name = "button1";
             button1.Size = new Size(188, 58);
             button1.TabIndex = 0;
@@ -47,15 +48,25 @@
             // 
             pictureBox1.Location = new Point(403, 81);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(540, 616);
+            pictureBox1.Size = new Size(607, 679);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            // 
+            // bRotate
+            // 
+            bRotate.Location = new Point(102, 90);
+            bRotate.Name = "bRotate";
+            bRotate.Size = new Size(188, 58);
+            bRotate.TabIndex = 2;
+            bRotate.Text = "Rotate";
+            bRotate.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1089, 820);
+            Controls.Add(bRotate);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             Name = "Form1";
@@ -68,5 +79,6 @@
 
         private Button button1;
         private PictureBox pictureBox1;
+        private Button bRotate;
     }
 }

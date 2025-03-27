@@ -13,13 +13,14 @@ namespace branchowanie
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.Filter = "Pliki graficzne|*.jpg;*.jpeg;*.png;*.bmp;*.gif|Wszystkie pliki|*.*";
+               
                 openFileDialog.Title = "Wybierz obraz";
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
-                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;                 }
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
             }
         }
     }
