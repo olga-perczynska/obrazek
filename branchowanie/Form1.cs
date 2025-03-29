@@ -101,7 +101,28 @@ namespace branchowanie
                 Bitmap flippedImage = new Bitmap(pictureBox1.Image);
                 flippedImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
                 pictureBox1.Image = flippedImage;
+                    pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
             }
+        }
+
+        private void bGreen_Click(object sender, EventArgs e)
+        {
+            Bitmap bmp = new Bitmap(pictureBox1.Image);
+            for (int y = 0; y < bmp.Height; y++)
+            {
+                for (int x = 0; x < bmp.Width; x++)
+                {
+                    Color pixel = bmp.GetPixel(x, y);
+                    if (!(pixel.G > pixel.R * 1.2 && pixel.G > pixel.B * 1.2)) 
+                    {
+                        bmp.SetPixel(x, y, Color.Black);
+                    }
+                }
+            }
+
+            pictureBox1.Image = bmp;
         }
     }
 }

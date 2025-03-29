@@ -36,6 +36,7 @@
             radioButton3 = new RadioButton();
             bInvert = new Button();
             bUpDo = new Button();
+            bGreen = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -121,11 +122,22 @@
             bUpDo.UseVisualStyleBackColor = true;
             bUpDo.Click += bUpDo_Click;
             // 
+            // bGreen
+            // 
+            bGreen.Location = new Point(102, 463);
+            bGreen.Name = "bGreen";
+            bGreen.Size = new Size(188, 58);
+            bGreen.TabIndex = 2;
+            bGreen.Text = "Only green";
+            bGreen.UseVisualStyleBackColor = true;
+            bGreen.Click += bGreen_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1089, 820);
+            Controls.Add(bGreen);
             Controls.Add(bUpDo);
             Controls.Add(bInvert);
             Controls.Add(radioButton3);
@@ -151,5 +163,6 @@
         private RadioButton radioButton3;
         private Button bInvert;
         private Button bUpDo;
+        private Button bGreen;
     }
 }
