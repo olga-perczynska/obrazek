@@ -12,6 +12,8 @@ namespace branchowanie
             InitializeComponent();
         }
 
+        private string currentImagePath;
+
         private void button1_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
@@ -21,8 +23,8 @@ namespace branchowanie
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    originalImage = Image.FromFile(openFileDialog.FileName);
-                    //pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
+                    currentImagePath = openFileDialog.FileName; 
+                    originalImage = Image.FromFile(currentImagePath);
                     pictureBox1.Image = new Bitmap(originalImage);
                     pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
@@ -101,9 +103,8 @@ namespace branchowanie
                 Bitmap flippedImage = new Bitmap(pictureBox1.Image);
                 flippedImage.RotateFlip(RotateFlipType.RotateNoneFlipY);
                 pictureBox1.Image = flippedImage;
-                    pictureBox1.Image = Image.FromFile(openFileDialog.FileName);
-                    pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                }
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
             }
         }
 
